@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Layout, Menu, Typography } from 'antd';
+import { Layout, Menu, Typography, Row, Col } from 'antd';
 import {
   UserOutlined,
   GlobalOutlined
@@ -41,7 +41,22 @@ const Home: NextPage = () => {
             </Menu>
           </Sider>
           <Content>
-            
+            <Row>
+              <Col span={15}>
+                <Row>
+                  <Col span={24}>Название команды</Col>
+                </Row>
+                <Row>
+                  <Col span={8}>Инфо команды</Col>
+                  <Col span={8}>Инфо команды</Col>
+                  <Col span={8}>Инфо команды</Col>
+                </Row>
+                <Row>
+                  <Col span={24}>Список игроков</Col>
+                </Row>
+              </Col>
+              <Col span={9}></Col>
+            </Row>
           </Content>
         </Layout>
         
