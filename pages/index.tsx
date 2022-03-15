@@ -11,6 +11,8 @@ import styles from '../styles/home.module.sass';
 const { Header, Sider, Content, Footer } = Layout;
 const { Title } = Typography;
 
+const colBackground = { background: 'grey', height: '7rem' }
+
 const Home: NextPage = () => {
   return (
     <>
@@ -43,19 +45,33 @@ const Home: NextPage = () => {
           <Content>
             <Row>
               <Col span={15}>
-                <Row>
-                  <Col span={24}>Название команды</Col>
+                <Row justify='space-around'>
+                  <Col span={23}>
+                    <Title className={styles.teamTitle} >Uventus</Title>
+                  </Col>
                 </Row>
-                <Row>
-                  <Col span={8}>Инфо команды</Col>
-                  <Col span={8}>Инфо команды</Col>
-                  <Col span={8}>Инфо команды</Col>
+                <Row justify="space-around">
+                  <Col span={23}>
+                    <div className={styles.card}></div>
+                  </Col>
                 </Row>
-                <Row>
-                  <Col span={24}>Список игроков</Col>
+                <Row justify="space-around">
+                  <Col span={11}>
+                    <div className={styles.card}></div>
+                  </Col>
+                  <Col span={11}>
+                    <div className={styles.card}></div>
+                  </Col>
+                </Row>
+                <Row justify="space-around">
+                  <Col span={23}>
+                    <div className={styles.card}></div>
+                  </Col>
                 </Row>
               </Col>
-              <Col span={9}></Col>
+              <Col span={9}>
+                <div className={styles.details}></div>
+              </Col>
             </Row>
           </Content>
         </Layout>
