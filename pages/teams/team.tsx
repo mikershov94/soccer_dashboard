@@ -1,12 +1,15 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import Link from 'next/link';
 import { Layout, Menu, Typography, Row, Col } from 'antd';
 import {
   UserOutlined,
   GlobalOutlined
 } from '@ant-design/icons';
 import "antd/dist/antd.css";
-import styles from '../styles/team.module.sass';
+
+import stylesHome from '../../styles/home.module.sass';
+import styles from '../../styles/team.module.sass';
 
 const { Header, Sider, Content, Footer } = Layout;
 const { Title } = Typography;
@@ -23,7 +26,9 @@ const TeamPage: NextPage = () => {
       </Head>
       <Layout className={styles.container}>
         <Header className={styles.header}>
-          <GlobalOutlined className={styles.logo} />
+          <Link href='/'>
+            <GlobalOutlined className={styles.logo} />
+          </Link>
           <div>
             <h1>Soccer Dashboard</h1>
           </div>
@@ -32,14 +37,20 @@ const TeamPage: NextPage = () => {
           <Sider>
             <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
               <Menu.Item key="1" icon={<UserOutlined />}>
-                Команда 1
+                <Link href='/teams/team'>
+                  Команда 1
+                </Link>
               </Menu.Item>
               <Menu.Item key="2" icon={<UserOutlined />}>
-                Команда 2
+                <Link href='/teams/team'>
+                  Команда 2
+                </Link>
               </Menu.Item>
               <Menu.Item key="3" icon={<UserOutlined />}>
-                Команда 3
-              </Menu.Item>
+                <Link href='/teams/team'>
+                  Команда 3
+                </Link>
+              </Menu.Item>         
             </Menu>
           </Sider>
           <Content>
