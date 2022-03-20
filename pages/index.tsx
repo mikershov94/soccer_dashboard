@@ -6,6 +6,8 @@ import { GlobalOutlined, UserOutlined } from '@ant-design/icons';
 
 import MainLayout from '../components/main-layout';
 import LeaderCard from '../components/leader-card';
+import LeaderGoals from '../components/leader-goals';
+import LeaderKicks from '../components/leader-kicks';
 
 import "antd/dist/antd.css";
 import styleHeader from '../styles/team.module.sass';
@@ -36,30 +38,12 @@ const Home: NextPage = () => {
                                 <Row justify='space-around'>
                                     <Col span={11}>
                                         <div className={styles.cardWrapper}>
-                                            <Card title="Голов"
-                                                  bordered={false}
-                                                  >
-                                                <Text>
-                                                    <div>Сыграно: 0</div>
-                                                    <div>Выиграно: 0</div>
-                                                    <div>Проиграно: 0</div>
-                                                    <div>Ничья: 0</div>
-                                                </Text>
-                                            </Card>
+                                            <LeaderGoals />
                                         </div>
                                     </Col>
                                     <Col span={11}>
                                         <div className={styles.cardWrapper}>
-                                            <Card title="Ударов"
-                                                  bordered={false}
-                                                  >
-                                                <Text>
-                                                    <div>Очков: 0</div>
-                                                    <div>Голов: 0</div>
-                                                    <div>Пропущено: 0</div>
-                                                    <div>Разница: 0</div>
-                                                </Text>
-                                            </Card>
+                                            <LeaderKicks />
                                         </div>
                                     </Col>
                                 </Row>
