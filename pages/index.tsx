@@ -10,6 +10,7 @@ import LeaderGoals from '../components/leader-goals';
 import LeaderKicks from '../components/leader-kicks';
 import TodayCard from '../components/today-card';
 import TomorrowCard from '../components/tomorrow-card';
+import YesterdayCard from '../components/yesterday-card';
 
 import "antd/dist/antd.css";
 import styleHeader from '../styles/team.module.sass';
@@ -66,92 +67,16 @@ const Home: NextPage = () => {
                             </Col>
                             <Col span={8}>
                                 <div className={styles.cardWrapper}>
-                                    <Card title="Вчера"
-                                          bordered={false}
-                                          >
-                                        <Row justify='space-around'
-                                                     align='middle'>
-                                            <Col>
-                                                <div className={styles.infoPlayTeamA}>
-                                                    <Title level={5}>Команда А</Title>
-                                                    <div>Страна</div>
-                                                </div>
-                                            </Col>
-                                            <Col>0 : 0</Col>
-                                            <Col>
-                                                <div className={styles.infoPlayTeamB}>
-                                                    <Title level={5}>Команда Б</Title>
-                                                    <div>Страна</div>
-                                                </div>
-                                            </Col>
-                                        </Row>
-                                    </Card>
+                                    <YesterdayCard />
                                 </div>
                                 <div className={styles.cardWrapper}>
-                                    <Card title="Вчера"
-                                          bordered={false}
-                                          >
-                                        <Row justify='space-around'
-                                                     align='middle'>
-                                            <Col>
-                                                <div className={styles.infoPlayTeamA}>
-                                                    <Title level={5}>Команда А</Title>
-                                                    <div>Страна</div>
-                                                </div>
-                                            </Col>
-                                            <Col>0 : 0</Col>
-                                            <Col>
-                                                <div className={styles.infoPlayTeamB}>
-                                                    <Title level={5}>Команда Б</Title>
-                                                    <div>Страна</div>
-                                                </div>
-                                            </Col>
-                                        </Row>
-                                    </Card>
+                                    <YesterdayCard />
                                 </div>
                                 <div className={styles.cardWrapper}>
-                                    <Card title="Вчера"
-                                          bordered={false}
-                                          >
-                                        <Row justify='space-around'
-                                                     align='middle'>
-                                            <Col>
-                                                <div className={styles.infoPlayTeamA}>
-                                                    <Title level={5}>Команда А</Title>
-                                                    <div>Страна</div>
-                                                </div>
-                                            </Col>
-                                            <Col>0 : 0</Col>
-                                            <Col>
-                                                <div className={styles.infoPlayTeamB}>
-                                                    <Title level={5}>Команда Б</Title>
-                                                    <div>Страна</div>
-                                                </div>
-                                            </Col>
-                                        </Row>
-                                    </Card>
+                                    <YesterdayCard />
                                 </div>
                                 <div className={styles.cardWrapper}>
-                                    <Card title="Вчера"
-                                          bordered={false}
-                                          >
-                                        <Row justify='space-around'
-                                                     align='middle'>
-                                            <Col>
-                                                <div className={styles.infoPlayTeamA}>
-                                                    <Title level={5}>Команда А</Title>
-                                                    <div>Страна</div>
-                                                </div>
-                                            </Col>
-                                            <Col>0 : 0</Col>
-                                            <Col>
-                                                <div className={styles.infoPlayTeamB}>
-                                                    <Title level={5}>Команда Б</Title>
-                                                    <div>Страна</div>
-                                                </div>
-                                            </Col>
-                                        </Row>
-                                    </Card>
+                                    <YesterdayCard />
                                 </div>
                             </Col>
                         </Row>
