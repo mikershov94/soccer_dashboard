@@ -2,7 +2,7 @@ import { Card, Typography } from 'antd';
 
 const { Text } = Typography;
 
-const LeaderGoals = () => {
+const Goals = () => {
     return(
         <Card title="Голов"
               bordered={false}>
@@ -16,4 +16,4 @@ const LeaderGoals = () => {
     );
 };
 
-export default LeaderGoals;
+export default Goals;

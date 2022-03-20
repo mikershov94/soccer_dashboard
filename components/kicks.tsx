@@ -2,7 +2,7 @@ import { Typography, Card } from 'antd';
 
 const { Text } = Typography;
 
-const LeaderKicks = () => {
+const Kicks = () => {
     return(
         <Card title="Ударов"
               bordered={false}>
@@ -16,4 +16,4 @@ const LeaderKicks = () => {
     );
 };
 
-export default LeaderKicks;
+export default Kicks;

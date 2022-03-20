@@ -4,8 +4,8 @@ import { Row, Col } from 'antd';
 
 import MainLayout from '../components/main-layout';
 import LeaderCard from '../components/leader-card';
-import LeaderGoals from '../components/leader-goals';
-import LeaderKicks from '../components/leader-kicks';
+import Goals from '../components/goals';
+import Kicks from '../components/kicks';
 import TodayCard from '../components/today-card';
 import TomorrowCard from '../components/tomorrow-card';
 import YesterdayCard from '../components/yesterday-card';
@@ -33,12 +33,12 @@ const Home: NextPage = () => {
                         <Row justify='space-around'>
                             <Col span={11}>
                                 <div className={styles.cardWrapper}>
-                                    <LeaderGoals />
+                                    <Goals />
                                 </div>
                             </Col>
                             <Col span={11}>
                                 <div className={styles.cardWrapper}>
-                                    <LeaderKicks />
+                                    <Kicks />
                                 </div>
                             </Col>
                         </Row>
