@@ -5,6 +5,7 @@ import { Layout, Menu, Row, Col, Card, Typography, Divider } from 'antd';
 import { GlobalOutlined, UserOutlined } from '@ant-design/icons';
 
 import MainLayout from '../components/main-layout';
+import LeaderCard from '../components/leader-card';
 
 import "antd/dist/antd.css";
 import styleHeader from '../styles/team.module.sass';
@@ -28,32 +29,7 @@ const Home: NextPage = () => {
                                 <Row justify='space-around'>
                                     <Col span={23} >
                                         <div className={styles.cardWrapper}>
-                                            <Card title="Лидер соревнования"
-                                                  bordered={false}
-                                                  >
-                                                <Row justify='space-around'
-                                                     align='middle'>
-                                                    <Col>
-                                                        <Title level={3}>Uventus</Title>
-                                                    </Col>
-                                                    <Col>
-                                                        <Text>
-                                                            <div>Сыграно: 0</div>
-                                                            <div>Выиграно: 0</div>
-                                                            <div>Проиграно: 0</div>
-                                                            <div>Ничья: 0</div>
-                                                        </Text>
-                                                    </Col>
-                                                    <Col>
-                                                        <Text>
-                                                            <div>Очков: 0</div>
-                                                            <div>Голов: 0</div>
-                                                            <div>Пропущено: 0</div>
-                                                            <div>Разница: 0</div>
-                                                        </Text>
-                                                    </Col>
-                                                </Row>
-                                            </Card>
+                                            <LeaderCard />
                                         </div>
                                     </Col>
                                 </Row>
