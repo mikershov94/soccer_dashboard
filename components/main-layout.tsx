@@ -1,31 +1,39 @@
-import { ReactElement } from "react"
-import styles from '../styles/Menu.module.sass'
+import { ReactElement } from "react";
+import Link from 'next/link';
+import { Layout, Menu, Row, Col, Card, Typography, Divider } from 'antd';
+import { GlobalOutlined, UserOutlined } from '@ant-design/icons';
 
-interface MainLayoutContext {
-    children: React.ReactNode
+import SideMenu from "./side-menu";
+
+import teamStyles from '../styles/team.module.sass';
+import homeStyles from '../styles/home.module.sass';
+
+const { Header, Sider, Content } = Layout;
+const { Title, Text } = Typography;
+
+interface MainLayoutWithoutProps {
+    children: ReactElement
 }
 
-const MainLayout = ({ children }: MainLayoutContext) => {
+const MainLayout = ({ children }: MainLayoutWithoutProps) => {
     return(
-        <div>
-            <header>
-                <h1 className={styles.testStyle} >Футбольный заголовок</h1>
-            </header>
-            <main className={styles.container}>
-                <nav >
-                    <ul className={styles.menu}>
-                        <li>Команда 1</li>
-                        <li>Команда 2</li>
-                        <li>Команда 3</li>
-                        <li>Команда 4</li>
-                    </ul>
-                </nav>
-                <div className={styles.content}>
-                    {children}
-                </div>
-            </main>
-        </div>
+        <Layout>
+            <Header className={teamStyles.header}>
+            <Link href='/'>
+                <GlobalOutlined className={teamStyles.logo} />
+            </Link>
+            <div>
+                <h1>Soccer Dashboard</h1>
+            </div>
+            </Header>
+            <Layout>
+                <Sider>
+                    <SideMenu />
+                </Sider>
+                <Content>{children}</Content>
+            </Layout>
+        </Layout>
     );
-}
+};
 
-export default MainLayout
+export default MainLayout;
