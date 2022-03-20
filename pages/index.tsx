@@ -1,8 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Link from 'next/link';
-import { Layout, Menu, Row, Col, Card, Typography, Divider } from 'antd';
-import { GlobalOutlined, UserOutlined } from '@ant-design/icons';
+import { Row, Col } from 'antd';
 
 import MainLayout from '../components/main-layout';
 import LeaderCard from '../components/leader-card';
@@ -12,12 +10,7 @@ import TodayCard from '../components/today-card';
 import TomorrowCard from '../components/tomorrow-card';
 import YesterdayCard from '../components/yesterday-card';
 
-import "antd/dist/antd.css";
-import styleHeader from '../styles/team.module.sass';
 import styles from '../styles/home.module.sass';
-
-const { Header, Sider, Content } = Layout;
-const { Title, Text } = Typography;
 
 const Home: NextPage = () => {
     return(
@@ -28,61 +21,58 @@ const Home: NextPage = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <MainLayout>
-                    
-                        <Row>
-                            <Col span={16}>
-                                <Row justify='space-around'>
-                                    <Col span={23} >
-                                        <div className={styles.cardWrapper}>
-                                            <LeaderCard />
-                                        </div>
-                                    </Col>
-                                </Row>
-                                <Row justify='space-around'>
-                                    <Col span={11}>
-                                        <div className={styles.cardWrapper}>
-                                            <LeaderGoals />
-                                        </div>
-                                    </Col>
-                                    <Col span={11}>
-                                        <div className={styles.cardWrapper}>
-                                            <LeaderKicks />
-                                        </div>
-                                    </Col>
-                                </Row>
-                                <Row justify='space-around'>
-                                    <Col span={23}>
-                                        <div className={styles.cardWrapper}>
-                                            <TodayCard />
-                                        </div>
-                                    </Col>
-                                </Row>
-                                <Row justify='space-around'>
-                                    <Col span={23}>
-                                        <div className={styles.cardWrapper}>
-                                            <TomorrowCard />
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </Col>
-                            <Col span={8}>
+                <Row>
+                    <Col span={16}>
+                        <Row justify='space-around'>
+                            <Col span={23} >
                                 <div className={styles.cardWrapper}>
-                                    <YesterdayCard />
-                                </div>
-                                <div className={styles.cardWrapper}>
-                                    <YesterdayCard />
-                                </div>
-                                <div className={styles.cardWrapper}>
-                                    <YesterdayCard />
-                                </div>
-                                <div className={styles.cardWrapper}>
-                                    <YesterdayCard />
+                                    <LeaderCard />
                                 </div>
                             </Col>
                         </Row>
-                    </MainLayout>
-                
-            
+                        <Row justify='space-around'>
+                            <Col span={11}>
+                                <div className={styles.cardWrapper}>
+                                    <LeaderGoals />
+                                </div>
+                            </Col>
+                            <Col span={11}>
+                                <div className={styles.cardWrapper}>
+                                    <LeaderKicks />
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row justify='space-around'>
+                            <Col span={23}>
+                                <div className={styles.cardWrapper}>
+                                    <TodayCard />
+                                </div>
+                            </Col>
+                        </Row>
+                        <Row justify='space-around'>
+                            <Col span={23}>
+                                <div className={styles.cardWrapper}>
+                                    <TomorrowCard />
+                                </div>
+                            </Col>
+                        </Row>
+                    </Col>
+                    <Col span={8}>
+                        <div className={styles.cardWrapper}>
+                            <YesterdayCard />
+                        </div>
+                        <div className={styles.cardWrapper}>
+                            <YesterdayCard />
+                        </div>
+                        <div className={styles.cardWrapper}>
+                            <YesterdayCard />
+                        </div>
+                        <div className={styles.cardWrapper}>
+                            <YesterdayCard />
+                        </div>
+                    </Col>
+                </Row>
+            </MainLayout>    
         </>
     );
 }
