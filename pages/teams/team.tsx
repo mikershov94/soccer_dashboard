@@ -3,6 +3,11 @@ import Head from 'next/head'
 import { Typography, Row, Col } from 'antd';
 
 import MainLayout from '../../components/main-layout';
+import TeamStat from '../../components/team-stat';
+import Goals from '../../components/goals';
+import Kicks from '../../components/kicks';
+import PlayerList from '../../components/player-list';
+import PlayerDetails from '../../components/player-details';
 
 import styles from '../../styles/team.module.sass';
 
@@ -26,25 +31,35 @@ const TeamPage: NextPage = () => {
             </Row>
             <Row justify="space-around">
               <Col span={23}>
-                <div className={styles.card}></div>
+                <div className={styles.wrapper}>
+                  <TeamStat />
+                </div>
               </Col>
             </Row>
             <Row justify="space-around">
               <Col span={11}>
-                <div className={styles.card}></div>
+                <div className={styles.wrapper}>
+                  <Goals />
+                </div>
               </Col>
               <Col span={11}>
-                <div className={styles.card}></div>
+                <div className={styles.wrapper}>
+                  <Kicks />
+                </div>
               </Col>
             </Row>
             <Row justify="space-around">
               <Col span={23}>
-                <div className={styles.card}></div>
+                <div className={styles.wrapper}>
+                  <PlayerList />
+                </div>
               </Col>
             </Row>
           </Col>
           <Col span={9}>
-            <div className={styles.details}></div>
+            <div className={styles.details}>
+              <PlayerDetails />
+            </div>
           </Col>
         </Row>
       </MainLayout>
