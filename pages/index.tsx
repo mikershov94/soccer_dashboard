@@ -8,6 +8,7 @@ import MainLayout from '../components/main-layout';
 import LeaderCard from '../components/leader-card';
 import LeaderGoals from '../components/leader-goals';
 import LeaderKicks from '../components/leader-kicks';
+import TodayCard from '../components/today-card';
 
 import "antd/dist/antd.css";
 import styleHeader from '../styles/team.module.sass';
@@ -50,61 +51,7 @@ const Home: NextPage = () => {
                                 <Row justify='space-around'>
                                     <Col span={23}>
                                         <div className={styles.cardWrapper}>
-                                            <Card title="Сегодня"
-                                                  bordered={false}
-                                                  >
-
-                                                <Row justify='space-around'
-                                                     align='middle'>
-                                                    <Col>
-                                                        <div className={styles.infoPlayTeamA}>
-                                                            <Title level={4}>Команда А</Title>
-                                                            <div>Страна</div>
-                                                        </div>
-                                                    </Col>
-                                                    <Col>00:00</Col>
-                                                    <Col>
-                                                        <div className={styles.infoPlayTeamB}>
-                                                            <Title level={4}>Команда Б</Title>
-                                                            <div>Страна</div>
-                                                        </div>
-                                                    </Col>
-                                                </Row>
-                                                <Divider></Divider>
-                                                <Row justify='space-around'
-                                                     align='middle'>
-                                                    <Col>
-                                                        <div className={styles.infoPlayTeamA}>
-                                                            <Title level={4}>Команда А</Title>
-                                                            <div>Страна</div>
-                                                        </div>
-                                                    </Col>
-                                                    <Col>00:00</Col>
-                                                    <Col>
-                                                        <div className={styles.infoPlayTeamB}>
-                                                            <Title level={4}>Команда Б</Title>
-                                                            <div>Страна</div>
-                                                        </div>
-                                                    </Col>
-                                                </Row>
-                                                <Divider></Divider>
-                                                <Row justify='space-around'
-                                                     align='middle'>
-                                                    <Col>
-                                                        <div className={styles.infoPlayTeamA}>
-                                                            <Title level={4}>Команда А</Title>
-                                                            <div>Страна</div>
-                                                        </div>
-                                                    </Col>
-                                                    <Col>00:00</Col>
-                                                    <Col>
-                                                        <div className={styles.infoPlayTeamB}>
-                                                            <Title level={4}>Команда Б</Title>
-                                                            <div>Страна</div>
-                                                        </div>
-                                                    </Col>
-                                                </Row>
-                                            </Card>
+                                            <TodayCard />
                                         </div>
                                     </Col>
                                 </Row>
